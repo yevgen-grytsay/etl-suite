@@ -1,0 +1,30 @@
+{
+  "name": "yevgen-grytsay/etl-suite",
+  "description": "Various ETL tools",
+  "minimum-stability": "dev",
+  "keywords": [
+    "etl"
+  ],
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Yevgen Grytsay",
+      "email": "yevgen_grytsay@mail.ru"
+    }
+  ],
+  "require": {
+    "zendframework/zend-stdlib": "^2.5@dev",
+    "symfony/dom-crawler": "^3.0@dev",
+    "phpoffice/phpexcel": "dev-master",
+    "league/csv": "^7.1@dev",
+    "php": ">=5.4.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^4.6.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "YevgenGrytsay\\EtlSuite\\": "src/"
+    }
+  }
+}
