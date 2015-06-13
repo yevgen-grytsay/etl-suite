@@ -1,8 +1,11 @@
 # Extract/Transform/Load Suite
 
+[![Build Status](https://travis-ci.org/yevgen-grytsay/etl-suite.svg?branch=master)](https://travis-ci.org/yevgen-grytsay/etl-suite)
+
 Contains various ETL tools.
 
 This is a very early version. Lacks of comments, documentation, tests and usage examples.
+
 
 ## Tools
 * Buffer: holds and flushes objects.
