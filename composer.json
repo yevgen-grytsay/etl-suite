@@ -14,7 +14,7 @@
   ],
   "require": {
     "zendframework/zend-stdlib": "^2.5@dev",
-    "symfony/dom-crawler": "^3.0@dev",
+    "symfony/dom-crawler": "^2.7.1",
     "phpoffice/phpexcel": "^1.8.1",
     "league/csv": "^7.1@dev",
     "php": ">=5.4.0"
