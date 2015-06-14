@@ -4,8 +4,10 @@
 
 Contains various ETL tools.
 
-This is a very early version. Lacks of comments, documentation, tests and usage examples.
+The library does not provide the tools for creating and running jobs.
+For more information refer the `Tools` section.
 
+This is a very early version. Lacks of comments, documentation, tests and usage examples.
 
 ## Tools
 * Buffer: holds and flushes objects.
@@ -16,12 +18,19 @@ This is a very early version. Lacks of comments, documentation, tests and usage 
 * Transformer: transforms input data in various ways (e.g. changes the names of keys, unsets or adds some elements etc.)
 * Value Mapper: maps values to some other values.
 
-## Usage
-TODO
-
 ## Installation
 
 ### Via Composer
 ```
 composer require yevgen-grytsay/etl-suite
 ```
+
+## Examples
+
+Few examples can be found in `examples` directory.
+
+Generally an example consists of a main script file `main.php` and some auxiliary classes and files.
+
+
+Also each example has his own `README.md` file
+with brief explanation.

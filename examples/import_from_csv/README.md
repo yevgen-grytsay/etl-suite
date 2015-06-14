@@ -12,3 +12,5 @@ product name, the second one - quantity in store and the third one - price.
 * Replacing numeric keys by meaningful string keys using the array transformer 
 and corresponding naming strategy.
 * Dumping the result array to stdout.
+
+![alt text](example.png "")
