@@ -1,7 +1,7 @@
 {
   "name": "yevgen-grytsay/etl-suite",
   "description": "Various ETL tools",
-  "minimum-stability": "dev",
+  "minimum-stability": "stable",
   "keywords": [
     "etl"
   ],
@@ -13,14 +13,14 @@
     }
   ],
   "require": {
-    "zendframework/zend-stdlib": "^2.5@dev",
-    "symfony/dom-crawler": "^2.7.1",
-    "phpoffice/phpexcel": "~1.8.0",
-    "league/csv": "^7.1@dev",
+    "zendframework/zend-stdlib": "~2.4",
+    "symfony/dom-crawler": "~2.7",
+    "phpoffice/phpexcel": "~1.8",
+    "league/csv": "~7.1",
     "php": ">=5.5.0"
   },
   "require-dev": {
-    "phpunit/phpunit": "^4.6.0"
+    "phpunit/phpunit": "~4.6"
   },
   "autoload": {
     "psr-4": {
