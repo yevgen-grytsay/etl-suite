@@ -27,7 +27,7 @@ composer require yevgen-grytsay/etl-suite
 
 ## Examples
 
-Few examples can be found in `examples` directory.
+A few examples can be found in `examples` directory.
 
 Generally an example consists of a main script file `main.php` and some auxiliary classes and files.
 
