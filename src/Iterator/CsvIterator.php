@@ -68,7 +68,7 @@ class CsvIterator implements \Iterator
      */
     public function key()
     {
-        $this->reader->key();
+        return $this->reader->key();
     }
 
     /**
