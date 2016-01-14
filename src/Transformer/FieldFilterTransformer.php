@@ -16,7 +16,7 @@ class FieldFilterTransformer implements TransformerInterface
     /**
      * @var array
      */
-    protected $passMask = [];
+    protected $passMask = array();
 
     /**
      * @param $keys

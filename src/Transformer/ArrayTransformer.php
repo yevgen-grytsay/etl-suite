@@ -33,7 +33,7 @@ class ArrayTransformer implements TransformerInterface
      */
     public function transform($data)
     {
-        $result = [];
+        $result = array();
         foreach ($data as $key => $value) {
             $hydratedKey = $this->namingStrategy->hydrate($key);
             $result[$hydratedKey] = $value;

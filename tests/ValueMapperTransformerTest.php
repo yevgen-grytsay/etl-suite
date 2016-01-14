@@ -17,7 +17,7 @@ class ValueMapperTransformerTest extends \PHPUnit_Framework_TestCase
     public function testShouldMapValuePresentInMap()
     {
         $mapper = $this
-            ->getMockBuilder(ValueMapper::class)
+            ->getMockBuilder('YevgenGrytsay\EtlSuite\ValueMapper')
             ->disableOriginalConstructor()
             ->getMock();
         $mapper
@@ -27,14 +27,14 @@ class ValueMapperTransformerTest extends \PHPUnit_Framework_TestCase
         $transformer = new ValueMapperTransformer();
         $transformer->addValueMapper('field', $mapper);
 
-        $transformer->transform(['field' => 'value']);
+        $transformer->transform(array('field' => 'value'));
     }
 
     public function testShouldPassCorrespondingValueToMapper()
     {
         $value = 'value';
         $mapper = $this
-            ->getMockBuilder(ValueMapper::class)
+            ->getMockBuilder('YevgenGrytsay\EtlSuite\ValueMapper')
             ->disableOriginalConstructor()
             ->getMock();
         $mapper
@@ -45,13 +45,13 @@ class ValueMapperTransformerTest extends \PHPUnit_Framework_TestCase
         $transformer = new ValueMapperTransformer();
         $transformer->addValueMapper('field', $mapper);
 
-        $transformer->transform(['field' => $value]);
+        $transformer->transform(array('field' => $value));
     }
 
     public function testShouldNotMapValueNotPresentInMap()
     {
         $mapper = $this
-            ->getMockBuilder(ValueMapper::class)
+            ->getMockBuilder('YevgenGrytsay\EtlSuite\ValueMapper')
             ->disableOriginalConstructor()
             ->getMock();
         $mapper
@@ -61,6 +61,6 @@ class ValueMapperTransformerTest extends \PHPUnit_Framework_TestCase
         $transformer = new ValueMapperTransformer();
         $transformer->addValueMapper('other_field', $mapper);
 
-        $transformer->transform(['field' => 'value']);
+        $transformer->transform(array('field' => 'value'));
     }
 }

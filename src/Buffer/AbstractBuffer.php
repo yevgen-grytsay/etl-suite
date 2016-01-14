@@ -16,7 +16,7 @@ abstract class AbstractBuffer implements BufferInterface
     /**
      * @var array
      */
-    protected $elements = [];
+    protected $elements = array();
 
     /**
      * @var

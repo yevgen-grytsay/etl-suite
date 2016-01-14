@@ -16,7 +16,7 @@ class CompositeTransformerTest extends \PHPUnit_Framework_TestCase
 {
     public function testShouldCallTransform()
     {
-        $transformer = $this->getMock(TransformerInterface::class);
+        $transformer = $this->getMock('YevgenGrytsay\EtlSuite\Transformer\TransformerInterface');
         $transformer
             ->expects($this->once())
             ->method('transform');
@@ -28,8 +28,8 @@ class CompositeTransformerTest extends \PHPUnit_Framework_TestCase
 
     public function testShouldPassProperDataToTransformMethod()
     {
-        $data = [3, 4];
-        $transformer = $this->getMock(TransformerInterface::class);
+        $data = array(3, 4);
+        $transformer = $this->getMock('YevgenGrytsay\EtlSuite\Transformer\TransformerInterface');
         $transformer
             ->expects($this->once())
             ->method('transform')
@@ -43,13 +43,13 @@ class CompositeTransformerTest extends \PHPUnit_Framework_TestCase
     public function testShouldPassToSecondTransformerResultOfFirst()
     {
         $value = 'some value';
-        $transformer_one = $this->getMock(TransformerInterface::class);
+        $transformer_one = $this->getMock('YevgenGrytsay\EtlSuite\Transformer\TransformerInterface');
         $transformer_one
             ->expects($this->once())
             ->method('transform')
             ->willReturn($value);
 
-        $transformer_two = $this->getMock(TransformerInterface::class);
+        $transformer_two = $this->getMock('YevgenGrytsay\EtlSuite\Transformer\TransformerInterface');
         $transformer_two
             ->expects($this->once())
             ->method('transform')
@@ -59,6 +59,6 @@ class CompositeTransformerTest extends \PHPUnit_Framework_TestCase
         $composite->addTransformer('name', $transformer_one);
         $composite->addTransformer('name2', $transformer_two);
 
-        $composite->transform([]);
+        $composite->transform(array());
     }
 }

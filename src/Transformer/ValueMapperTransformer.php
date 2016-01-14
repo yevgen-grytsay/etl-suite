@@ -16,7 +16,7 @@ class ValueMapperTransformer implements TransformerInterface
     /**
      * @var ValueMapper[]
      */
-    protected $valueMapperMap = [];
+    protected $valueMapperMap = array();
 
     /**
      * @param $field
@@ -34,7 +34,7 @@ class ValueMapperTransformer implements TransformerInterface
      */
     public function transform($data)
     {
-        $result = [];
+        $result = array();
         foreach ($data as $name => $value) {
             $result[$name] = $this->mapValue($name, $value);
         }

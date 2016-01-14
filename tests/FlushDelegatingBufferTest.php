@@ -17,7 +17,7 @@ class FlushDelegatingBufferTest extends \PHPUnit_Framework_TestCase
     public function testShouldCallPushMethodOfDelegate()
     {
         $delegate = $this
-            ->getMockBuilder(FlushDelegateInterface::class)
+            ->getMockBuilder('YevgenGrytsay\EtlSuite\Buffer\FlushDelegateInterface')
             ->getMock();
 
         $delegate
@@ -31,7 +31,7 @@ class FlushDelegatingBufferTest extends \PHPUnit_Framework_TestCase
     public function testShouldEmptyAfterFlush()
     {
         $delegate = $this
-            ->getMockBuilder(FlushDelegateInterface::class)
+            ->getMockBuilder('YevgenGrytsay\EtlSuite\Buffer\FlushDelegateInterface')
             ->getMock();
 
         $buffer = new FlushDelegatingBuffer($delegate);
@@ -45,7 +45,7 @@ class FlushDelegatingBufferTest extends \PHPUnit_Framework_TestCase
     public function testShouldAutoFlushWhenLimitReached()
     {
         $delegate = $this
-            ->getMockBuilder(FlushDelegateInterface::class)
+            ->getMockBuilder('YevgenGrytsay\EtlSuite\Buffer\FlushDelegateInterface')
             ->getMock();
 
         $buffer = new FlushDelegatingBuffer($delegate);

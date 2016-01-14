@@ -14,7 +14,7 @@ class ExcludeFieldTransformer implements TransformerInterface
     /**
      * @var array
      */
-    protected $excludeMask = [];
+    protected $excludeMask = array();
 
     /**
      * @param $keys

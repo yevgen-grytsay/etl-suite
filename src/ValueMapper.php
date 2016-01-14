@@ -14,7 +14,7 @@ class ValueMapper
     /**
      * @var array
      */
-    protected $valueMap = [];
+    protected $valueMap = array();
 
     /**
      * @var

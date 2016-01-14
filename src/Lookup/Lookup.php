@@ -19,12 +19,12 @@ class Lookup implements LookupInterface
     /**
      * @var array
      */
-    protected $lookupMap = [];
+    protected $lookupMap = array();
 
     /**
      * @var array
      */
-    protected $extractMap = [];
+    protected $extractMap = array();
 
     /**
      * @var \YevgenGrytsay\EtlSuite\Lookup\FinderInterface
@@ -51,13 +51,13 @@ class Lookup implements LookupInterface
     //TODO: refactoring needed
     public function findFor($row)
     {
-        $criteria = [];
+        $criteria = array();
         foreach ($this->lookupMap as $rowKey => $lookupKey) {
             $criteria[$lookupKey] = array_key_exists($rowKey, $row) ? $row[$rowKey] : null;
         }
 
         $found = $this->finder->findBy($criteria);
-        $result = [];
+        $result = array();
         if (is_array($found)) {
 
             if (count($this->extractMap) === 0) {

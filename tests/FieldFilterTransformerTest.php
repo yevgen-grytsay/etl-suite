@@ -15,17 +15,17 @@ class FieldFilterTransformerTest extends \PHPUnit_Framework_TestCase
 {
     public function testShouldNotPassField()
     {
-        $transformer = new FieldFilterTransformer(['pass_field']);
-        $result = $transformer->transform(['not_pass_field' => 'some value']);
+        $transformer = new FieldFilterTransformer(array('pass_field'));
+        $result = $transformer->transform(array('not_pass_field' => 'some value'));
 
         $this->assertEmpty($result);
     }
 
     public function testShouldPassField()
     {
-        $transformer = new FieldFilterTransformer(['pass_field']);
-        $result = $transformer->transform(['pass_field' => 'some value']);
+        $transformer = new FieldFilterTransformer(array('pass_field'));
+        $result = $transformer->transform(array('pass_field' => 'some value'));
 
-        $this->assertEquals(['pass_field' => 'some value'], $result);
+        $this->assertEquals(array('pass_field' => 'some value'), $result);
     }
 }

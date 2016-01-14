@@ -17,8 +17,8 @@ class MergeStrategyMapTest extends \PHPUnit_Framework_TestCase
     {
         $merge = new MergeStrategyMap('another');
 
-        $result = $merge->merge(['name' => 'one'], ['name' => 'another']);
+        $result = $merge->merge(array('name' => 'one'), array('name' => 'another'));
 
-        $this->assertEquals(['name' => 'one', 'another' => ['name' => 'another']], $result);
+        $this->assertEquals(array('name' => 'one', 'another' => array('name' => 'another')), $result);
     }
 }

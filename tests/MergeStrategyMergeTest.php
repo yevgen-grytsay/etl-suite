@@ -16,8 +16,8 @@ class MergeStrategyMergeTest extends \PHPUnit_Framework_TestCase
     public function testMerge()
     {
         $merge = new MergeStrategyMerge();
-        $result = $merge->merge(['name' => 'one'], ['name' => 'another']);
+        $result = $merge->merge(array('name' => 'one'), array('name' => 'another'));
 
-        $this->assertEquals(['name' => 'another'], $result);
+        $this->assertEquals(array('name' => 'another'), $result);
     }
 }

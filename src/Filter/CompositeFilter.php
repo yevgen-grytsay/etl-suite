@@ -16,7 +16,7 @@ class CompositeFilter implements FilterInterface
     /**
      * @var \YevgenGrytsay\EtlSuite\FilterInterface[]
      */
-    protected $filterChain = [];
+    protected $filterChain = array();
 
     /**
      * @var \YevgenGrytsay\EtlSuite\FilterInterface

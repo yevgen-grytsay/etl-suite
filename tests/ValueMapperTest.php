@@ -15,7 +15,7 @@ class ValueMapperTest extends \PHPUnit_Framework_TestCase
 {
     public function testShouldMap()
     {
-        $mapper = new ValueMapper(['Y' => 'yes']);
+        $mapper = new ValueMapper(array('Y' => 'yes'));
         $value = $mapper->mapValue('Y');
 
         $this->assertEquals('yes', $value);
@@ -23,7 +23,7 @@ class ValueMapperTest extends \PHPUnit_Framework_TestCase
 
     public function testShouldPass()
     {
-        $mapper = new ValueMapper(['Y' => 'yes']);
+        $mapper = new ValueMapper(array('Y' => 'yes'));
         $value = $mapper->mapValue('N');
 
         $this->assertEquals('N', $value);
@@ -31,7 +31,7 @@ class ValueMapperTest extends \PHPUnit_Framework_TestCase
 
     public function testShouldUseDefaultPass()
     {
-        $mapper = new ValueMapper(['Y' => 'yes']);
+        $mapper = new ValueMapper(array('Y' => 'yes'));
         $mapper->setDefaultValue('default_value');
         $value = $mapper->mapValue('N');
 

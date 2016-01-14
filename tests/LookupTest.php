@@ -16,67 +16,67 @@ class LookupTest extends \PHPUnit_Framework_TestCase
 {
     public function testExtraction()
     {
-        $finder = $this->getMockBuilder(FinderInterface::class)->getMock();
+        $finder = $this->getMockBuilder('YevgenGrytsay\EtlSuite\Lookup\FinderInterface')->getMock();
         $finder
             ->expects($this->once())
             ->method('findBy')
-            ->willReturn(['name' => 'one']);
-        $lookup = new Lookup(['first_name' => 'name'], ['name'], $finder);
+            ->willReturn(array('name' => 'one'));
+        $lookup = new Lookup(array('first_name' => 'name'), array('name'), $finder);
 
-        $result = $lookup->findFor(['first_name' => 'one']);
+        $result = $lookup->findFor(array('first_name' => 'one'));
 
-        $this->assertEquals(['name' => 'one'], $result);
+        $this->assertEquals(array('name' => 'one'), $result);
     }
 
     public function testMapExtraction()
     {
-        $finder = $this->getMockBuilder(FinderInterface::class)->getMock();
+        $finder = $this->getMockBuilder('YevgenGrytsay\EtlSuite\Lookup\FinderInterface')->getMock();
         $finder
             ->expects($this->once())
             ->method('findBy')
-            ->willReturn(['name' => 'one']);
-        $lookup = new Lookup(['first_name' => 'name'], ['extracted_name' => 'name'], $finder);
+            ->willReturn(array('name' => 'one'));
+        $lookup = new Lookup(array('first_name' => 'name'), array('extracted_name' => 'name'), $finder);
 
-        $result = $lookup->findFor(['first_name' => 'one']);
+        $result = $lookup->findFor(array('first_name' => 'one'));
 
-        $this->assertEquals(['extracted_name' => 'one'], $result);
+        $this->assertEquals(array('extracted_name' => 'one'), $result);
     }
 
     public function testShouldPassCriteria()
     {
-        $finder = $this->getMockBuilder(FinderInterface::class)->getMock();
+        $finder = $this->getMockBuilder('YevgenGrytsay\EtlSuite\Lookup\FinderInterface')->getMock();
         $finder
             ->expects($this->once())
             ->method('findBy')
-            ->with(['name' => 'one']);
-        $lookup = new Lookup(['first_name' => 'name'], ['extracted_name' => 'name'], $finder);
+            ->with(array('name' => 'one'));
+        $lookup = new Lookup(array('first_name' => 'name'), array('extracted_name' => 'name'), $finder);
 
-        $lookup->findFor(['first_name' => 'one']);
+        $lookup->findFor(array('first_name' => 'one'));
     }
 
     public function testShouldPassOnlyLookupFieldsAsCriteria()
     {
-        $finder = $this->getMockBuilder(FinderInterface::class)->getMock();
+        $finder = $this->getMockBuilder('YevgenGrytsay\EtlSuite\Lookup\FinderInterface')->getMock();
         $finder
             ->expects($this->once())
             ->method('findBy')
-            ->with(['name' => 'one']);
-        $lookup = new Lookup(['first_name' => 'name'], ['extracted_name' => 'name'], $finder);
+            ->with(array('name' => 'one'));
+        $lookup = new Lookup(array('first_name' => 'name'), array('extracted_name' => 'name'), $finder);
 
-        $lookup->findFor(['first_name' => 'one', 'location' => 'another']);
+        $lookup->findFor(array('first_name' => 'one', 'location' => 'another'));
     }
 
     public function testShouldExtractOnlyExtractionFields()
     {
-        $finder = $this->getMockBuilder(FinderInterface::class)->getMock();
+        $finder = $this->getMockBuilder('YevgenGrytsay\EtlSuite\Lookup\FinderInterface')->getMock();
         $finder
             ->expects($this->once())
             ->method('findBy')
-            ->willReturn(['name' => 'one', 'location' => 'another']);
-        $lookup = new Lookup(['first_name' => 'name'], ['extracted_name' => 'name'], $finder);
+            ->willReturn(array('name' => 'one', 'location' => 'another'));
+        $lookup = new Lookup(array('first_name' => 'name'), array('extracted_name' => 'name'), $finder);
 
-        $result = $lookup->findFor(['first_name' => 'one']);
+        $result = $lookup->findFor(array('first_name' => 'one'));
 
-        $this->assertEquals(['extracted_name' => 'one'], $result);
+        $this->assertEquals(array('extracted_name' => 'one'), $result);
     }
 }

@@ -16,7 +16,7 @@ class CompositeTransformer implements TransformerInterface
     /**
      * @var \YevgenGrytsay\EtlSuite\Transformer\TransformerInterface[]
      */
-    protected $transformerChain = [];
+    protected $transformerChain = array();
 
     /**
      * @param $name
