@@ -29,5 +29,10 @@
       "YevgenGrytsay\\EtlSuite\\": "src/"
     }
   },
-  "non-feature-branches": ["php-53-compat"]
+  "non-feature-branches": ["php-53-compat"],
+  "config": {
+      "platform": {
+          "php": "5.3.29"
+      }
+  }
 }
