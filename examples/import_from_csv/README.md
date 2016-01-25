@@ -2,7 +2,7 @@
 
 ## Input
 
-* CSV file `products.csv` containing some products. The first column contains
+* CSV file `products.csv` contains some products. The first column contains
 product name, the second one - quantity in store and the third one - price.
 
 ## Steps

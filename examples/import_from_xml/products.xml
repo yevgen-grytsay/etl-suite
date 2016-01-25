@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<response>
+    <products>
+        <product>
+            <vendor>Lenovo</vendor>
+            <model>P780</model>
+            <price>100</price>
+        </product>
+        <product>
+            <vendor>ASUS</vendor>
+            <model>Rog Sica</model>
+            <price>50</price>
+        </product>
+    </products>
+</response>

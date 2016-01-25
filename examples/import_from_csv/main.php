@@ -34,11 +34,11 @@ $buffer->setFlushInterval(1000);
 /**
  * Setup transformer
  */
-$propertyMap = [
+$propertyMap = array(
     0 => 'name',
     1 => 'quantity',
     2 => 'price'
-];
+);
 $namingStrategy = new ArrayMapNamingStrategy(array_flip($propertyMap));
 $transformer = new ArrayTransformer($namingStrategy);
 

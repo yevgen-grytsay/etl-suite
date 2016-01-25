@@ -34,3 +34,6 @@ Generally an example consists of a main script file `main.php` and some auxiliar
 
 Also each example has his own `README.md` file
 with brief explanation.
+
+## Optional packages
+* In order to use ``YevgenGrytsay\EtlSuite\Iterator\ExcelIterator`` you need to install ``phpoffice/phpexcel`` package.
